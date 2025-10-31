@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentence Analysis</title>
+</head>  
+  <script>
+    let sentence = prompt("Enter a sentence:");
+    let words = sentence.trim().split(" ");
+    let wordCount = words.length;
+    let old = prompt("Enter the word you want to replace:");
+    let neww = prompt("Enter the new word:");
+    let rplsentence = sentence.replaceAll(old, neww);
+    let substring = prompt("Enter a substring to check:");
+    let isPresent = sentence.includes(substring);
+    alert(`
+Original Sentence: ${sentence}
+Word Count: ${wordCount}
+After Replacement: ${rplsentence}
+Is "${substring}" present? ${isPresent ? "Yes" : "No"}
+`);
+  </script>
+</html>
